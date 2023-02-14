@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap');
+
+/* css reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #edf2f8;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr); /* same as above */
+  /* we can use px, % etc */
+
+  /* column-gap: 10px;
+  row-gap: 10px; */
+  gap: 10px; /* same as above */
+
+  /* to limit the height of a item */
+  /* grid-auto-rows: 200px; */
+  /* grid-auto-rows: minmax(
+    100px,
+    auto */
+  /*min height is 100px the max for a row is auto */
+
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* not really used too much  */
+
+  /* align-items: stretch; */
+  /* the default is stretch and it makes everything in the row grow to match */
+  /* align-items: start;
+
+  justify-content: center; */
+  /* same as flex box -- cool */
+}
+
+.item {
+  background-color: steelblue;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+/* .item:nth-of-type(2) {
+  height: 100px;
+  width: 100px; */
+/* also has align self just like in flex box */
+/* align-self: end;
+  justify-self: center;
+} */
+
+/* spanning multiple  */
+/* also look at dev tools inspect el and click on "grid" , it can help*/
+
+/* .item:nth-of-type(1) {
+  background-color: #000;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* this is the same as */
+/* grid-column: 1 / 3;
+  grid-column: 1 / span(2); */
+/* same thing */
+/* } */
+
+/* to span vertically */
+
+/* .item:nth-of-type(3) {
+  background-color: salmon;
+  grid-row: 2/4;
+}
+
+.item:nth-of-type(4) {
+  background-color: teal;
+  grid-row: 2/4;
+}  */
