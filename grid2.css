@@ -11,6 +11,8 @@ body {
   font-size: 13px;
   height: 100vh;
 
+  /* ------ example begins ------------------------ */
+
   display: grid;
   grid-template-areas:
     'header header header'
