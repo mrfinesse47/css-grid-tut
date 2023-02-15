@@ -10,6 +10,17 @@ body {
   line-height: 1.7;
   font-size: 13px;
   height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+
+  /* and now to size everything */
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 80px 1fr 70px;
+  /* you can use a combination of units as well */
 }
 
 header,
@@ -21,4 +32,25 @@ nav {
   color: #fff;
   padding: 20px;
   border: skyblue 1px solid;
+}
+
+header {
+  grid-area: header;
+  /* this matches in grid-template-areas, but not a string lol, so weird */
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
 }
